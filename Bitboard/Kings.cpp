@@ -13,10 +13,10 @@ const uint64_t EMPTY_RIGHT_SIDE = 0xfefefefefefefefe;
 
 Kings::Kings(PieceType t) : type(t) {
   // Initialize for white
-  if(type == WHITE_KNIGHT) {
+  if(type == WHITE_KING) {
     bitboard = 0x0000000000000008;
   }
-  else if(type == BLACK_KNIGHT) {
+  else if(type == BLACK_KING) {
     bitboard = 0x0800000000000000;
   }
   else {
@@ -101,31 +101,31 @@ uint64_t Kings::left(uint64_t bitboard, uint64_t empty_squares, uint64_t enemy_s
     return (bitboard << 1) & (empty_squares | enemy_squares) & EMPTY_RIGHT_SIDE;
 }
 
-uint64_t right(uint64_t bitboard, uint64_t empty_squares, uint64_t enemy_squares) {
+uint64_t Kings::right(uint64_t bitboard, uint64_t empty_squares, uint64_t enemy_squares) {
     return (bitboard >> 1) & (empty_squares | enemy_squares) & EMPTY_LEFT_SIDE;
 }
 
-uint64_t up(uint64_t bitboard, uint64_t empty_squares, uint64_t enemy_squares) {
+uint64_t Kings::up(uint64_t bitboard, uint64_t empty_squares, uint64_t enemy_squares) {
     return (bitboard << 8) & (empty_squares | enemy_squares);
 }
 
-uint64_t down(uint64_t bitboard, uint64_t empty_squares, uint64_t enemy_squares) {
+uint64_t Kings::down(uint64_t bitboard, uint64_t empty_squares, uint64_t enemy_squares) {
     return (bitboard >> 8) & (empty_squares | enemy_squares);
 }
 
-uint64_t up_left(uint64_t bitboard, uint64_t empty_squares, uint64_t enemy_squares) {
+uint64_t Kings::up_left(uint64_t bitboard, uint64_t empty_squares, uint64_t enemy_squares) {
     return (bitboard << 9) & (empty_squares | enemy_squares) & EMPTY_RIGHT_SIDE;
 }
 
-uint64_t down_left(uint64_t bitboard, uint64_t empty_squares, uint64_t enemy_squares) {
+uint64_t Kings::down_left(uint64_t bitboard, uint64_t empty_squares, uint64_t enemy_squares) {
     return (bitboard >> 7) & (empty_squares | enemy_squares) & EMPTY_RIGHT_SIDE;
 }
 
-uint64_t up_right(uint64_t bitboard, uint64_t empty_squares, uint64_t enemy_squares) {
+uint64_t Kings::up_right(uint64_t bitboard, uint64_t empty_squares, uint64_t enemy_squares) {
     return (bitboard << 7) & (empty_squares | enemy_squares) & EMPTY_LEFT_SIDE;
 }
 
-uint64_t down_right(uint64_t bitboard, uint64_t empty_squares, uint64_t enemy_squares) {
+uint64_t Kings::down_right(uint64_t bitboard, uint64_t empty_squares, uint64_t enemy_squares) {
     return (bitboard >> 9) & (empty_squares | enemy_squares) & EMPTY_LEFT_SIDE;
 }
 
@@ -150,7 +150,7 @@ std::array<uint64_t, Kings::MAX_NUM_KING_MOVES> Kings::all_moves(uint64_t empty_
 
         // Find where the King came from (opposite move function
         FuncPtr reverse_move = Kings::get_opposite_move(move);
-        uint64_t from_square = Bitboard::reverse(to_square);
+        uint64_t from_square = reverse_move(to_square, 0xffffffffffffffff, 0xffffffffffffffff);
 
         // Get completed post-move bitboard, that we will then save
         uint64_t to_save = (bitboard | to_square) & (Bitboard::complement(from_square));

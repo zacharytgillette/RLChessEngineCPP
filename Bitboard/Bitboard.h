@@ -7,11 +7,9 @@
 
 class Bitboard {
 private:
-   uint64_t board;
 public:
-  // Constructors: no args; regular
+  // Constructors: no args
   Bitboard();
-  Bitboard(uint64_t);
 
   // Complement bitboard
   static uint64_t complement(uint64_t bitboard);
@@ -25,10 +23,6 @@ public:
   // To string
   static std::string to_string(uint64_t bitboard);
   static std::string reverse_to_string(uint64_t bitboard);
-
-  // Getter, setter
-  uint64_t get_board() const;
-  void set_board(uint64_t bitboard);
 
   // Friend function: cout for bitboards
   static void print(uint64_t bitboard);

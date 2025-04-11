@@ -157,7 +157,7 @@ std::array<uint64_t, Knights::MAX_NUM_KNIGHT_MOVES> Knights::all_moves(uint64_t 
 
         // Find where the knight came from (opposite move function
         FuncPtr reverse_move = Knights::get_opposite_move(move);
-        uint64_t from_square = Bitboard::reverse(to_square);
+        uint64_t from_square = reverse_move(to_square, 0xffffffffffffffff, 0xffffffffffffffff);
 
         // Get completed post-move bitboard, that we will then save
         uint64_t to_save = (bitboard | to_square) & (Bitboard::complement(from_square));

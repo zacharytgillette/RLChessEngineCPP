@@ -4,8 +4,7 @@
 
 #include "Bitboard.h"
 
-Bitboard::Bitboard() : board(0) { }
-Bitboard::Bitboard(uint64_t bitboard) : board(bitboard) { }
+Bitboard::Bitboard() { }
 
 uint64_t Bitboard::complement(uint64_t bitboard) {
   return ~bitboard;
@@ -37,15 +36,13 @@ std::string Bitboard::reverse_to_string(uint64_t bitboard) {
   return to_ret;
 }
 
-uint64_t Bitboard::get_board() const {
-  return board;
-}
-
-void Bitboard::set_board(uint64_t bitboard) {
-  board = bitboard;
-}
-
 void Bitboard::print(uint64_t bitboard) {
+
+  if(bitboard == 0x0) {
+    std::cout << "\nEMPTY BITBOARD\n";
+    return;
+  }
+
   std::string bitboard_string = Bitboard::to_string(bitboard);
 
   std::cout << '\n';
