@@ -7,22 +7,25 @@ include_directories(.)
 include_directories(Bitboard)
 
 add_executable(RLChessEngineCPP
-        Bitboard/Bishops.cpp
-        Bitboard/Bishops.h
-        Bitboard/Bitboard.cpp
-        Bitboard/Bitboard.h
-        Bitboard/Kings.cpp
-        Bitboard/Kings.h
-        Bitboard/Knights.cpp
-        Bitboard/Knights.h
-        Bitboard/Pawns.cpp
-        Bitboard/Pawns.h
-        Bitboard/Pieces.cpp
-        Bitboard/Pieces.h
-        Bitboard/Queens.cpp
-        Bitboard/Queens.h
-        Bitboard/Rooks.cpp
-        Bitboard/Rooks.h
-        Bitboard/Sliding_Pieces.cpp
-        Bitboard/Sliding_Pieces.h
-        main.cpp)
+        Bitboard/src/Bishops.cpp
+        Bitboard/include/Bishops.h
+        Bitboard/src/Bitboard.cpp
+        Bitboard/include/Bitboard.h
+        Bitboard/src/Kings.cpp
+        Bitboard/include/Kings.h
+        Bitboard/src/Knights.cpp
+        Bitboard/include/Knights.h
+        Bitboard/src/Pawns.cpp
+        Bitboard/include/Pawns.h
+        Bitboard/src/Pieces.cpp
+        Bitboard/include/Pieces.h
+        Bitboard/src/Queens.cpp
+        Bitboard/include/Queens.h
+        Bitboard/src/Rooks.cpp
+        Bitboard/include/Rooks.h
+        Bitboard/src/Sliding_Pieces.cpp
+        Bitboard/include/Sliding_Pieces.h
+        main.cpp
+        test.cpp
+        game_functions.h
+        game_functions.cpp)

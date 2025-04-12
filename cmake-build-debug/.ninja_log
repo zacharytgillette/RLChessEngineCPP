@@ -1,0 +1,23 @@
+# ninja log v5
+3	507	1744486207329967504	CMakeFiles/RLChessEngineCPP.dir/Bitboard/Bishops.cpp.o	92e7dd8f5fe930af
+3	426	1744471692772744863	CMakeFiles/RLChessEngineCPP.dir/Bitboard/Pawns.cpp.o	d8a40cc9594a8b05
+4	508	1744486207332002083	CMakeFiles/RLChessEngineCPP.dir/Bitboard/Queens.cpp.o	1ec5be2b732b12b8
+3	384	1744471692730971265	CMakeFiles/RLChessEngineCPP.dir/Bitboard/Pieces.cpp.o	1a1182f4ebb4d90c
+398	788	1744486438331745849	CMakeFiles/RLChessEngineCPP.dir/Bitboard/src/Queens.cpp.o	b0304c2eb657fc58
+3	398	1744486437939996948	CMakeFiles/RLChessEngineCPP.dir/Bitboard/src/Pieces.cpp.o	c1f9a4060359d549
+3	395	1744471692737919726	CMakeFiles/RLChessEngineCPP.dir/Bitboard/Knights.cpp.o	ec5b819e961cac95
+3	361	1744471692706154400	CMakeFiles/RLChessEngineCPP.dir/Bitboard/Kings.cpp.o	3759c52c1190dd56
+2	519	1744486438055880972	CMakeFiles/RLChessEngineCPP.dir/Bitboard/src/Bitboard.cpp.o	43389dd119da2919
+5	508	1744486207330644211	CMakeFiles/RLChessEngineCPP.dir/Bitboard/Sliding_Pieces.cpp.o	c4845a53dfd57d3b
+2	382	1744471692727956079	CMakeFiles/RLChessEngineCPP.dir/Bitboard/Bitboard.cpp.o	4575def4c2da97b3
+4	505	1744486207328852131	CMakeFiles/RLChessEngineCPP.dir/Bitboard/Rooks.cpp.o	d0f29c93c3bb0027
+453	840	1744486438386959492	CMakeFiles/RLChessEngineCPP.dir/main.cpp.o	43859927de6f654f
+429	787	1744486438325699903	CMakeFiles/RLChessEngineCPP.dir/Bitboard/src/Rooks.cpp.o	bc8309dac6276fc4
+519	870	1744486438416840684	CMakeFiles/RLChessEngineCPP.dir/test.cpp.o	8746bf81cf513647
+3	429	1744486437975714795	CMakeFiles/RLChessEngineCPP.dir/Bitboard/src/Pawns.cpp.o	3f293adb1117b10c
+2	453	1744486437997595044	CMakeFiles/RLChessEngineCPP.dir/Bitboard/src/Kings.cpp.o	eaf045fcf6271e96
+3	531	1744486438070160027	CMakeFiles/RLChessEngineCPP.dir/Bitboard/src/Knights.cpp.o	e4946da0de5f1e6
+543	633	1744486740077232998	RLChessEngineCPP	2fb8c693822ceb59
+0	71	1744486886386920381	build.ninja	98bc206fee1dec07
+2	452	1744486437996122547	CMakeFiles/RLChessEngineCPP.dir/Bitboard/src/Bishops.cpp.o	4ec468821fca6722
+3	542	1744486739991641623	CMakeFiles/RLChessEngineCPP.dir/Bitboard/src/Sliding_Pieces.cpp.o	91e2da49d12c674
